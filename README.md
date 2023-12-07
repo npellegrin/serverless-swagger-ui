@@ -6,12 +6,20 @@ This is project inspired by [a blog post from Hendrik Hagen](https://www.tecrace
 
 Check out the original Node.js project on https://github.com/Eraszz/tecracer-blog-projects/tree/main/api-gateway-swagger-ui
 
+## How to run this sample
+
+1. Generate a Flask zip for AWS Lambda layer by executing the [generate-requirements.sh](generate-requirements.sh) script.
+2. Export AWS credentials from your favorite AWS account
+3. Run `terraform apply`
+
+The deployment will generate an Amazon API Gateway api into the Paris (`eu-west-3`) region, with a demo route `/orders` and the associated documentation at `/api-docs` route.
+
 ## Related projects
 
 This project is intended to be a minimal-dependecies standalone example of a Python serverless swagger UI served by Amazon Api Gateway. This project also bundles modified versions of other open-source projects, in particular:
 
 - [Flask Swagger UI](https://github.com/sveint/flask-swagger-ui/tree/master) proposing a blueprint to run Swagger UI in Flask
-- [awsgi](https://github.com/slank/awsgi/tree/master) exposing a way to run Flask apps directly in Amazon Api Gateway with AWS Lambda procy integration
+- [awsgi](https://github.com/slank/awsgi/tree/master) exposing a way to run Flask apps directly in Amazon Api Gateway with AWS Lambda proxy integration
 
 ## Mixed content disclaimer
 
